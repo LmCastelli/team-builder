@@ -32,9 +32,12 @@ function App() {
       email: formValues.email.trim(),
       role: formValues.role
     }
-    if (!newTeamMember.name || !newTeamMember.email || !newTeamMember.role) {
-      return;
-    }
+    // if (!newTeamMember.name || !newTeamMember.email || !newTeamMember.role) {
+    //   return;
+    // }
+    teamMembers.push(newTeamMember);
+    setMembers(teamMembers)
+    setFormValues(initialFormValues);
   }
 
 
@@ -44,7 +47,7 @@ function App() {
 
   return (
     <div className="App">
-      <h2>Title </h2>
+      <h2>Will it Load </h2>
       
       <Form
         values={formValues}
